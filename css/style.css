@@ -1,0 +1,2614 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Main Stylesheet
+
+Here's where the magic happens. Here, you'll see we are calling in
+the separate media queries. The base mobile goes outside any query
+and is called at the beginning, after that we call the rest
+of the styles inside media queries.
+******************************************************************/
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent;
+}
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap;
+}
+/**
+ * Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0;
+}
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0;
+}
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/******************************************************************
+CUSTOMIZED RESET VALUES
+I added these extra styles as a more personalized reset. Feel free
+to remove them if you like or add your own. If you want to update
+the normalize styles, make sure to edit from this point up.
+******************************************************************/
+p {
+  -webkit-hyphens: auto;
+  -epub-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+b,
+strong,
+.strong {
+  font-weight: bold;
+}
+dfn,
+em,
+.em {
+  font-style: italic;
+}
+small,
+.small {
+  font-size: 75%;
+}
+dd {
+  margin: 0;
+}
+menu,
+ul,
+ol {
+  list-style-type: none;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+}
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Mixins & Constants Stylesheet
+
+This is where you can take advantage of LESS' great features: 
+Mixins & Constants. I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques like box shadow and
+border-radius.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more. 
+
+******************************************************************/
+/*********************
+CLEARFIXIN'
+*********************/
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/*********************
+TOOLS
+*********************/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.image-replacement {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+/*********************
+TYPOGRAPHY
+*********************/
+/* 	To embed your own fonts, use this syntax
+	and place your fonts inside the 
+	library/fonts folder. For more information
+	on embedding fonts, go to:
+	http://www.fontsquirrel.com/
+	Be sure to remove the comment brackets.
+*/
+/*	@font-face {
+    	font-family: 'Font Name';
+    	src: url('../fonts/font-name.eot');
+    	src: url('../fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/font-name.woff') format('woff'),
+             url('../fonts/font-name.ttf') format('truetype'),
+             url('../fonts/font-name.svg#font-name') format('svg');
+    	font-weight: normal;
+    	font-style: normal;
+	}
+*/
+/* 
+use the best ampersand 
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+span.amp {
+  font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+  font-style: italic;
+}
+/* text alignment */
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.alert {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+}
+.alert-help {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+  border-color: #e8dc59;
+  background: #ebe16f;
+}
+.alert-info {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+  border-color: #bfe4f4;
+  background: #d5edf8;
+}
+.alert-error {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+  border-color: #f8cdce;
+  background: #fbe3e4;
+}
+.alert-success {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+  border-color: #deeaae;
+  background: #e6efc2;
+}
+/*********************
+BORDER RADIUS
+*********************/
+/* 
+NOTE: For older browser support (and some mobile), 
+don't use the shorthand to define *different* corners. 
+
+USAGE: .border-radius(4px); 
+
+*/
+/*********************
+TRANISTION
+*********************/
+/* .transition(all,2s); */
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can 
+really slow down your CSS. Don't overdo it.
+*********************/
+/* .css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SHADOW
+*********************/
+/* .boxShadow(0,0,4px,0,#444); */
+/* .boxShadow(none); */
+/*********************
+BUTTONS
+*********************/
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.eot?-mylk4q');
+  src: url('fonts/icomoon.eot?#iefix-mylk4q') format('embedded-opentype'), url('fonts/icomoon.woff?-mylk4q') format('woff'), url('fonts/icomoon.ttf?-mylk4q') format('truetype'), url('fonts/icomoon.svg?-mylk4q#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-home:before {
+  content: "\e600";
+}
+.icon-home2:before {
+  content: "\e601";
+}
+.icon-home3:before {
+  content: "\e602";
+}
+.icon-office:before {
+  content: "\e603";
+}
+.icon-newspaper:before {
+  content: "\e604";
+}
+.icon-pencil:before {
+  content: "\e605";
+}
+.icon-pencil2:before {
+  content: "\e606";
+}
+.icon-quill:before {
+  content: "\e607";
+}
+.icon-pen:before {
+  content: "\e608";
+}
+.icon-blog:before {
+  content: "\e609";
+}
+.icon-droplet:before {
+  content: "\e60a";
+}
+.icon-paint-format:before {
+  content: "\e60b";
+}
+.icon-image:before {
+  content: "\e60c";
+}
+.icon-image2:before {
+  content: "\e60d";
+}
+.icon-images:before {
+  content: "\e60e";
+}
+.icon-camera:before {
+  content: "\e60f";
+}
+.icon-music:before {
+  content: "\e610";
+}
+.icon-headphones:before {
+  content: "\e611";
+}
+.icon-play:before {
+  content: "\e612";
+}
+.icon-film:before {
+  content: "\e613";
+}
+.icon-camera2:before {
+  content: "\e614";
+}
+.icon-dice:before {
+  content: "\e615";
+}
+.icon-pacman:before {
+  content: "\e616";
+}
+.icon-spades:before {
+  content: "\e617";
+}
+.icon-clubs:before {
+  content: "\e618";
+}
+.icon-diamonds:before {
+  content: "\e619";
+}
+.icon-pawn:before {
+  content: "\e61a";
+}
+.icon-bullhorn:before {
+  content: "\e61b";
+}
+.icon-connection:before {
+  content: "\e61c";
+}
+.icon-podcast:before {
+  content: "\e61d";
+}
+.icon-feed:before {
+  content: "\e61e";
+}
+.icon-book:before {
+  content: "\e61f";
+}
+.icon-books:before {
+  content: "\e620";
+}
+.icon-library:before {
+  content: "\e621";
+}
+.icon-file:before {
+  content: "\e622";
+}
+.icon-profile:before {
+  content: "\e623";
+}
+.icon-file2:before {
+  content: "\e624";
+}
+.icon-file3:before {
+  content: "\e625";
+}
+.icon-file4:before {
+  content: "\e626";
+}
+.icon-copy:before {
+  content: "\e627";
+}
+.icon-copy2:before {
+  content: "\e628";
+}
+.icon-copy3:before {
+  content: "\e629";
+}
+.icon-paste:before {
+  content: "\e62a";
+}
+.icon-paste2:before {
+  content: "\e62b";
+}
+.icon-paste3:before {
+  content: "\e62c";
+}
+.icon-stack:before {
+  content: "\e62d";
+}
+.icon-folder:before {
+  content: "\e62e";
+}
+.icon-folder-open:before {
+  content: "\e62f";
+}
+.icon-tag:before {
+  content: "\e630";
+}
+.icon-tags:before {
+  content: "\e631";
+}
+.icon-barcode:before {
+  content: "\e632";
+}
+.icon-qrcode:before {
+  content: "\e633";
+}
+.icon-ticket:before {
+  content: "\e634";
+}
+.icon-cart:before {
+  content: "\e635";
+}
+.icon-cart2:before {
+  content: "\e636";
+}
+.icon-cart3:before {
+  content: "\e637";
+}
+.icon-coin:before {
+  content: "\e638";
+}
+.icon-credit:before {
+  content: "\e639";
+}
+.icon-calculate:before {
+  content: "\e63a";
+}
+.icon-support:before {
+  content: "\e63b";
+}
+.icon-phone:before {
+  content: "\e63c";
+}
+.icon-phone-hang-up:before {
+  content: "\e63d";
+}
+.icon-address-book:before {
+  content: "\e63e";
+}
+.icon-notebook:before {
+  content: "\e63f";
+}
+.icon-envelope:before {
+  content: "\e640";
+}
+.icon-pushpin:before {
+  content: "\e641";
+}
+.icon-location:before {
+  content: "\e642";
+}
+.icon-location2:before {
+  content: "\e643";
+}
+.icon-compass:before {
+  content: "\e644";
+}
+.icon-map:before {
+  content: "\e645";
+}
+.icon-map2:before {
+  content: "\e646";
+}
+.icon-history:before {
+  content: "\e647";
+}
+.icon-clock:before {
+  content: "\e648";
+}
+.icon-clock2:before {
+  content: "\e649";
+}
+.icon-alarm:before {
+  content: "\e64a";
+}
+.icon-alarm2:before {
+  content: "\e64b";
+}
+.icon-bell:before {
+  content: "\e64c";
+}
+.icon-stopwatch:before {
+  content: "\e64d";
+}
+.icon-calendar:before {
+  content: "\e64e";
+}
+.icon-calendar2:before {
+  content: "\e64f";
+}
+.icon-print:before {
+  content: "\e650";
+}
+.icon-keyboard:before {
+  content: "\e651";
+}
+.icon-screen:before {
+  content: "\e652";
+}
+.icon-laptop:before {
+  content: "\e653";
+}
+.icon-mobile:before {
+  content: "\e654";
+}
+.icon-mobile2:before {
+  content: "\e655";
+}
+.icon-tablet:before {
+  content: "\e656";
+}
+.icon-tv:before {
+  content: "\e657";
+}
+.icon-cabinet:before {
+  content: "\e658";
+}
+.icon-drawer:before {
+  content: "\e659";
+}
+.icon-drawer2:before {
+  content: "\e65a";
+}
+.icon-drawer3:before {
+  content: "\e65b";
+}
+.icon-box-add:before {
+  content: "\e65c";
+}
+.icon-box-remove:before {
+  content: "\e65d";
+}
+.icon-download:before {
+  content: "\e65e";
+}
+.icon-upload:before {
+  content: "\e65f";
+}
+.icon-disk:before {
+  content: "\e660";
+}
+.icon-storage:before {
+  content: "\e661";
+}
+.icon-undo:before {
+  content: "\e662";
+}
+.icon-redo:before {
+  content: "\e663";
+}
+.icon-flip:before {
+  content: "\e664";
+}
+.icon-flip2:before {
+  content: "\e665";
+}
+.icon-undo2:before {
+  content: "\e666";
+}
+.icon-redo2:before {
+  content: "\e667";
+}
+.icon-forward:before {
+  content: "\e668";
+}
+.icon-reply:before {
+  content: "\e669";
+}
+.icon-bubble:before {
+  content: "\e66a";
+}
+.icon-bubbles:before {
+  content: "\e66b";
+}
+.icon-bubbles2:before {
+  content: "\e66c";
+}
+.icon-bubble2:before {
+  content: "\e66d";
+}
+.icon-bubbles3:before {
+  content: "\e66e";
+}
+.icon-bubbles4:before {
+  content: "\e66f";
+}
+.icon-user:before {
+  content: "\e670";
+}
+.icon-users:before {
+  content: "\e671";
+}
+.icon-user2:before {
+  content: "\e672";
+}
+.icon-users2:before {
+  content: "\e673";
+}
+.icon-user3:before {
+  content: "\e674";
+}
+.icon-user4:before {
+  content: "\e675";
+}
+.icon-quotes-left:before {
+  content: "\e676";
+}
+.icon-busy:before {
+  content: "\e677";
+}
+.icon-spinner:before {
+  content: "\e678";
+}
+.icon-spinner2:before {
+  content: "\e679";
+}
+.icon-spinner3:before {
+  content: "\e67a";
+}
+.icon-spinner4:before {
+  content: "\e67b";
+}
+.icon-spinner5:before {
+  content: "\e67c";
+}
+.icon-spinner6:before {
+  content: "\e67d";
+}
+.icon-binoculars:before {
+  content: "\e67e";
+}
+.icon-search:before {
+  content: "\e67f";
+}
+.icon-zoomin:before {
+  content: "\e680";
+}
+.icon-zoomout:before {
+  content: "\e681";
+}
+.icon-expand:before {
+  content: "\e682";
+}
+.icon-contract:before {
+  content: "\e683";
+}
+.icon-expand2:before {
+  content: "\e684";
+}
+.icon-contract2:before {
+  content: "\e685";
+}
+.icon-key:before {
+  content: "\e686";
+}
+.icon-key2:before {
+  content: "\e687";
+}
+.icon-lock:before {
+  content: "\e688";
+}
+.icon-lock2:before {
+  content: "\e689";
+}
+.icon-unlocked:before {
+  content: "\e68a";
+}
+.icon-wrench:before {
+  content: "\e68b";
+}
+.icon-settings:before {
+  content: "\e68c";
+}
+.icon-equalizer:before {
+  content: "\e68d";
+}
+.icon-cog:before {
+  content: "\e68e";
+}
+.icon-cogs:before {
+  content: "\e68f";
+}
+.icon-cog2:before {
+  content: "\e690";
+}
+.icon-hammer:before {
+  content: "\e691";
+}
+.icon-wand:before {
+  content: "\e692";
+}
+.icon-aid:before {
+  content: "\e693";
+}
+.icon-bug:before {
+  content: "\e694";
+}
+.icon-pie:before {
+  content: "\e695";
+}
+.icon-stats:before {
+  content: "\e696";
+}
+.icon-bars:before {
+  content: "\e697";
+}
+.icon-bars2:before {
+  content: "\e698";
+}
+.icon-gift:before {
+  content: "\e699";
+}
+.icon-trophy:before {
+  content: "\e69a";
+}
+.icon-glass:before {
+  content: "\e69b";
+}
+.icon-mug:before {
+  content: "\e69c";
+}
+.icon-food:before {
+  content: "\e69d";
+}
+.icon-leaf:before {
+  content: "\e69e";
+}
+.icon-rocket:before {
+  content: "\e69f";
+}
+.icon-meter:before {
+  content: "\e6a0";
+}
+.icon-meter2:before {
+  content: "\e6a1";
+}
+.icon-dashboard:before {
+  content: "\e6a2";
+}
+.icon-hammer2:before {
+  content: "\e6a3";
+}
+.icon-fire:before {
+  content: "\e6a4";
+}
+.icon-lab:before {
+  content: "\e6a5";
+}
+.icon-magnet:before {
+  content: "\e6a6";
+}
+.icon-remove:before {
+  content: "\e6a7";
+}
+.icon-remove2:before {
+  content: "\e6a8";
+}
+.icon-briefcase:before {
+  content: "\e6a9";
+}
+.icon-airplane:before {
+  content: "\e6aa";
+}
+.icon-truck:before {
+  content: "\e6ab";
+}
+.icon-road:before {
+  content: "\e6ac";
+}
+.icon-accessibility:before {
+  content: "\e6ad";
+}
+.icon-target:before {
+  content: "\e6ae";
+}
+.icon-shield:before {
+  content: "\e6af";
+}
+.icon-lightning:before {
+  content: "\e6b0";
+}
+.icon-switch:before {
+  content: "\e6b1";
+}
+.icon-powercord:before {
+  content: "\e6b2";
+}
+.icon-signup:before {
+  content: "\e6b3";
+}
+.icon-list:before {
+  content: "\e6b4";
+}
+.icon-list2:before {
+  content: "\e6b5";
+}
+.icon-numbered-list:before {
+  content: "\e6b6";
+}
+.icon-menu:before {
+  content: "\e6b7";
+}
+.icon-menu2:before {
+  content: "\e6b8";
+}
+.icon-tree:before {
+  content: "\e6b9";
+}
+.icon-cloud:before {
+  content: "\e6ba";
+}
+.icon-cloud-download:before {
+  content: "\e6bb";
+}
+.icon-cloud-upload:before {
+  content: "\e6bc";
+}
+.icon-download2:before {
+  content: "\e6bd";
+}
+.icon-upload2:before {
+  content: "\e6be";
+}
+.icon-download3:before {
+  content: "\e6bf";
+}
+.icon-upload3:before {
+  content: "\e6c0";
+}
+.icon-globe:before {
+  content: "\e6c1";
+}
+.icon-earth:before {
+  content: "\e6c2";
+}
+.icon-link:before {
+  content: "\e6c3";
+}
+.icon-flag:before {
+  content: "\e6c4";
+}
+.icon-attachment:before {
+  content: "\e6c5";
+}
+.icon-eye:before {
+  content: "\e6c6";
+}
+.icon-eye-blocked:before {
+  content: "\e6c7";
+}
+.icon-eye2:before {
+  content: "\e6c8";
+}
+.icon-bookmark:before {
+  content: "\e6c9";
+}
+.icon-bookmarks:before {
+  content: "\e6ca";
+}
+.icon-brightness-medium:before {
+  content: "\e6cb";
+}
+.icon-brightness-contrast:before {
+  content: "\e6cc";
+}
+.icon-contrast:before {
+  content: "\e6cd";
+}
+.icon-star:before {
+  content: "\e6ce";
+}
+.icon-star2:before {
+  content: "\e6cf";
+}
+.icon-star3:before {
+  content: "\e6d0";
+}
+.icon-heart:before {
+  content: "\e6d1";
+}
+.icon-heart2:before {
+  content: "\e6d2";
+}
+.icon-heart-broken:before {
+  content: "\e6d3";
+}
+.icon-thumbs-up:before {
+  content: "\e6d4";
+}
+.icon-thumbs-up2:before {
+  content: "\e6d5";
+}
+.icon-happy:before {
+  content: "\e6d6";
+}
+.icon-happy2:before {
+  content: "\e6d7";
+}
+.icon-smiley:before {
+  content: "\e6d8";
+}
+.icon-smiley2:before {
+  content: "\e6d9";
+}
+.icon-tongue:before {
+  content: "\e6da";
+}
+.icon-tongue2:before {
+  content: "\e6db";
+}
+.icon-sad:before {
+  content: "\e6dc";
+}
+.icon-sad2:before {
+  content: "\e6dd";
+}
+.icon-wink:before {
+  content: "\e6de";
+}
+.icon-wink2:before {
+  content: "\e6df";
+}
+.icon-grin:before {
+  content: "\e6e0";
+}
+.icon-grin2:before {
+  content: "\e6e1";
+}
+.icon-cool:before {
+  content: "\e6e2";
+}
+.icon-cool2:before {
+  content: "\e6e3";
+}
+.icon-angry:before {
+  content: "\e6e4";
+}
+.icon-angry2:before {
+  content: "\e6e5";
+}
+.icon-evil:before {
+  content: "\e6e6";
+}
+.icon-evil2:before {
+  content: "\e6e7";
+}
+.icon-shocked:before {
+  content: "\e6e8";
+}
+.icon-shocked2:before {
+  content: "\e6e9";
+}
+.icon-confused:before {
+  content: "\e6ea";
+}
+.icon-confused2:before {
+  content: "\e6eb";
+}
+.icon-neutral:before {
+  content: "\e6ec";
+}
+.icon-neutral2:before {
+  content: "\e6ed";
+}
+.icon-wondering:before {
+  content: "\e6ee";
+}
+.icon-wondering2:before {
+  content: "\e6ef";
+}
+.icon-point-up:before {
+  content: "\e6f0";
+}
+.icon-point-right:before {
+  content: "\e6f1";
+}
+.icon-point-down:before {
+  content: "\e6f2";
+}
+.icon-point-left:before {
+  content: "\e6f3";
+}
+.icon-warning:before {
+  content: "\e6f4";
+}
+.icon-notification:before {
+  content: "\e6f5";
+}
+.icon-question:before {
+  content: "\e6f6";
+}
+.icon-info:before {
+  content: "\e6f7";
+}
+.icon-info2:before {
+  content: "\e6f8";
+}
+.icon-blocked:before {
+  content: "\e6f9";
+}
+.icon-cancel-circle:before {
+  content: "\e6fa";
+}
+.icon-checkmark-circle:before {
+  content: "\e6fb";
+}
+.icon-spam:before {
+  content: "\e6fc";
+}
+.icon-close:before {
+  content: "\e6fd";
+}
+.icon-checkmark:before {
+  content: "\e6fe";
+}
+.icon-checkmark2:before {
+  content: "\e6ff";
+}
+.icon-spell-check:before {
+  content: "\e700";
+}
+.icon-minus:before {
+  content: "\e701";
+}
+.icon-plus:before {
+  content: "\e702";
+}
+.icon-enter:before {
+  content: "\e703";
+}
+.icon-exit:before {
+  content: "\e704";
+}
+.icon-play2:before {
+  content: "\e705";
+}
+.icon-pause:before {
+  content: "\e706";
+}
+.icon-stop:before {
+  content: "\e707";
+}
+.icon-backward:before {
+  content: "\e708";
+}
+.icon-forward2:before {
+  content: "\e709";
+}
+.icon-play3:before {
+  content: "\e70a";
+}
+.icon-pause2:before {
+  content: "\e70b";
+}
+.icon-stop2:before {
+  content: "\e70c";
+}
+.icon-backward2:before {
+  content: "\e70d";
+}
+.icon-forward3:before {
+  content: "\e70e";
+}
+.icon-first:before {
+  content: "\e70f";
+}
+.icon-last:before {
+  content: "\e710";
+}
+.icon-previous:before {
+  content: "\e711";
+}
+.icon-next:before {
+  content: "\e712";
+}
+.icon-eject:before {
+  content: "\e713";
+}
+.icon-volume-high:before {
+  content: "\e714";
+}
+.icon-volume-medium:before {
+  content: "\e715";
+}
+.icon-volume-low:before {
+  content: "\e716";
+}
+.icon-volume-mute:before {
+  content: "\e717";
+}
+.icon-volume-mute2:before {
+  content: "\e718";
+}
+.icon-volume-increase:before {
+  content: "\e719";
+}
+.icon-volume-decrease:before {
+  content: "\e71a";
+}
+.icon-loop:before {
+  content: "\e71b";
+}
+.icon-loop2:before {
+  content: "\e71c";
+}
+.icon-loop3:before {
+  content: "\e71d";
+}
+.icon-shuffle:before {
+  content: "\e71e";
+}
+.icon-arrow-up-left:before {
+  content: "\e71f";
+}
+.icon-arrow-up:before {
+  content: "\e720";
+}
+.icon-arrow-up-right:before {
+  content: "\e721";
+}
+.icon-arrow-right:before {
+  content: "\e722";
+}
+.icon-arrow-down-right:before {
+  content: "\e723";
+}
+.icon-arrow-down:before {
+  content: "\e724";
+}
+.icon-arrow-down-left:before {
+  content: "\e725";
+}
+.icon-arrow-left:before {
+  content: "\e726";
+}
+.icon-arrow-up-left2:before {
+  content: "\e727";
+}
+.icon-arrow-up2:before {
+  content: "\e728";
+}
+.icon-arrow-up-right2:before {
+  content: "\e729";
+}
+.icon-arrow-right2:before {
+  content: "\e72a";
+}
+.icon-arrow-down-right2:before {
+  content: "\e72b";
+}
+.icon-arrow-down2:before {
+  content: "\e72c";
+}
+.icon-arrow-down-left2:before {
+  content: "\e72d";
+}
+.icon-arrow-left2:before {
+  content: "\e72e";
+}
+.icon-arrow-up-left3:before {
+  content: "\e72f";
+}
+.icon-arrow-up3:before {
+  content: "\e730";
+}
+.icon-arrow-up-right3:before {
+  content: "\e731";
+}
+.icon-arrow-right3:before {
+  content: "\e732";
+}
+.icon-arrow-down-right3:before {
+  content: "\e733";
+}
+.icon-arrow-down3:before {
+  content: "\e734";
+}
+.icon-arrow-down-left3:before {
+  content: "\e735";
+}
+.icon-arrow-left3:before {
+  content: "\e736";
+}
+.icon-tab:before {
+  content: "\e737";
+}
+.icon-checkbox-checked:before {
+  content: "\e738";
+}
+.icon-checkbox-unchecked:before {
+  content: "\e739";
+}
+.icon-checkbox-partial:before {
+  content: "\e73a";
+}
+.icon-radio-checked:before {
+  content: "\e73b";
+}
+.icon-radio-unchecked:before {
+  content: "\e73c";
+}
+.icon-crop:before {
+  content: "\e73d";
+}
+.icon-scissors:before {
+  content: "\e73e";
+}
+.icon-filter:before {
+  content: "\e73f";
+}
+.icon-filter2:before {
+  content: "\e740";
+}
+.icon-font:before {
+  content: "\e741";
+}
+.icon-text-height:before {
+  content: "\e742";
+}
+.icon-text-width:before {
+  content: "\e743";
+}
+.icon-bold:before {
+  content: "\e744";
+}
+.icon-underline:before {
+  content: "\e745";
+}
+.icon-italic:before {
+  content: "\e746";
+}
+.icon-strikethrough:before {
+  content: "\e747";
+}
+.icon-omega:before {
+  content: "\e748";
+}
+.icon-sigma:before {
+  content: "\e749";
+}
+.icon-table:before {
+  content: "\e74a";
+}
+.icon-table2:before {
+  content: "\e74b";
+}
+.icon-insert-template:before {
+  content: "\e74c";
+}
+.icon-pilcrow:before {
+  content: "\e74d";
+}
+.icon-lefttoright:before {
+  content: "\e74e";
+}
+.icon-righttoleft:before {
+  content: "\e74f";
+}
+.icon-paragraph-left:before {
+  content: "\e750";
+}
+.icon-paragraph-center:before {
+  content: "\e751";
+}
+.icon-paragraph-right:before {
+  content: "\e752";
+}
+.icon-paragraph-justify:before {
+  content: "\e753";
+}
+.icon-paragraph-left2:before {
+  content: "\e754";
+}
+.icon-paragraph-center2:before {
+  content: "\e755";
+}
+.icon-paragraph-right2:before {
+  content: "\e756";
+}
+.icon-paragraph-justify2:before {
+  content: "\e757";
+}
+.icon-indent-increase:before {
+  content: "\e758";
+}
+.icon-indent-decrease:before {
+  content: "\e759";
+}
+.icon-newtab:before {
+  content: "\e75a";
+}
+.icon-embed:before {
+  content: "\e75b";
+}
+.icon-code:before {
+  content: "\e75c";
+}
+.icon-console:before {
+  content: "\e75d";
+}
+.icon-share:before {
+  content: "\e75e";
+}
+.icon-mail:before {
+  content: "\e75f";
+}
+.icon-mail2:before {
+  content: "\e760";
+}
+.icon-mail3:before {
+  content: "\e761";
+}
+.icon-mail4:before {
+  content: "\e762";
+}
+.icon-google:before {
+  content: "\e763";
+}
+.icon-googleplus:before {
+  content: "\e764";
+}
+.icon-googleplus2:before {
+  content: "\e765";
+}
+.icon-googleplus3:before {
+  content: "\e766";
+}
+.icon-googleplus4:before {
+  content: "\e767";
+}
+.icon-google-drive:before {
+  content: "\e768";
+}
+.icon-facebook:before {
+  content: "\e769";
+}
+.icon-facebook2:before {
+  content: "\e76a";
+}
+.icon-facebook3:before {
+  content: "\e76b";
+}
+.icon-instagram:before {
+  content: "\e76c";
+}
+.icon-twitter:before {
+  content: "\e76d";
+}
+.icon-twitter2:before {
+  content: "\e76e";
+}
+.icon-twitter3:before {
+  content: "\e76f";
+}
+.icon-feed2:before {
+  content: "\e770";
+}
+.icon-feed3:before {
+  content: "\e771";
+}
+.icon-feed4:before {
+  content: "\e772";
+}
+.icon-youtube:before {
+  content: "\e773";
+}
+.icon-youtube2:before {
+  content: "\e774";
+}
+.icon-vimeo:before {
+  content: "\e775";
+}
+.icon-vimeo2:before {
+  content: "\e776";
+}
+.icon-vimeo3:before {
+  content: "\e777";
+}
+.icon-lanyrd:before {
+  content: "\e778";
+}
+.icon-flickr:before {
+  content: "\e779";
+}
+.icon-flickr2:before {
+  content: "\e77a";
+}
+.icon-flickr3:before {
+  content: "\e77b";
+}
+.icon-flickr4:before {
+  content: "\e77c";
+}
+.icon-picassa:before {
+  content: "\e77d";
+}
+.icon-picassa2:before {
+  content: "\e77e";
+}
+.icon-dribbble:before {
+  content: "\e77f";
+}
+.icon-dribbble2:before {
+  content: "\e780";
+}
+.icon-dribbble3:before {
+  content: "\e781";
+}
+.icon-forrst:before {
+  content: "\e782";
+}
+.icon-forrst2:before {
+  content: "\e783";
+}
+.icon-deviantart:before {
+  content: "\e784";
+}
+.icon-deviantart2:before {
+  content: "\e785";
+}
+.icon-steam:before {
+  content: "\e786";
+}
+.icon-steam2:before {
+  content: "\e787";
+}
+.icon-github:before {
+  content: "\e788";
+}
+.icon-github2:before {
+  content: "\e789";
+}
+.icon-github3:before {
+  content: "\e78a";
+}
+.icon-github4:before {
+  content: "\e78b";
+}
+.icon-github5:before {
+  content: "\e78c";
+}
+.icon-wordpress:before {
+  content: "\e78d";
+}
+.icon-wordpress2:before {
+  content: "\e78e";
+}
+.icon-joomla:before {
+  content: "\e78f";
+}
+.icon-blogger:before {
+  content: "\e790";
+}
+.icon-blogger2:before {
+  content: "\e791";
+}
+.icon-tumblr:before {
+  content: "\e792";
+}
+.icon-tumblr2:before {
+  content: "\e793";
+}
+.icon-yahoo:before {
+  content: "\e794";
+}
+.icon-tux:before {
+  content: "\e795";
+}
+.icon-apple:before {
+  content: "\e796";
+}
+.icon-finder:before {
+  content: "\e797";
+}
+.icon-android:before {
+  content: "\e798";
+}
+.icon-windows:before {
+  content: "\e799";
+}
+.icon-windows8:before {
+  content: "\e79a";
+}
+.icon-soundcloud:before {
+  content: "\e79b";
+}
+.icon-soundcloud2:before {
+  content: "\e79c";
+}
+.icon-skype:before {
+  content: "\e79d";
+}
+.icon-reddit:before {
+  content: "\e79e";
+}
+.icon-linkedin:before {
+  content: "\e79f";
+}
+.icon-lastfm:before {
+  content: "\e7a0";
+}
+.icon-lastfm2:before {
+  content: "\e7a1";
+}
+.icon-delicious:before {
+  content: "\e7a2";
+}
+.icon-stumbleupon:before {
+  content: "\e7a3";
+}
+.icon-stumbleupon2:before {
+  content: "\e7a4";
+}
+.icon-stackoverflow:before {
+  content: "\e7a5";
+}
+.icon-pinterest:before {
+  content: "\e7a6";
+}
+.icon-pinterest2:before {
+  content: "\e7a7";
+}
+.icon-xing:before {
+  content: "\e7a8";
+}
+.icon-xing2:before {
+  content: "\e7a9";
+}
+.icon-flattr:before {
+  content: "\e7aa";
+}
+.icon-foursquare:before {
+  content: "\e7ab";
+}
+.icon-foursquare2:before {
+  content: "\e7ac";
+}
+.icon-paypal:before {
+  content: "\e7ad";
+}
+.icon-paypal2:before {
+  content: "\e7ae";
+}
+.icon-paypal3:before {
+  content: "\e7af";
+}
+.icon-yelp:before {
+  content: "\e7b0";
+}
+.icon-libreoffice:before {
+  content: "\e7b1";
+}
+.icon-file-pdf:before {
+  content: "\e7b2";
+}
+.icon-file-openoffice:before {
+  content: "\e7b3";
+}
+.icon-file-word:before {
+  content: "\e7b4";
+}
+.icon-file-excel:before {
+  content: "\e7b5";
+}
+.icon-file-zip:before {
+  content: "\e7b6";
+}
+.icon-file-powerpoint:before {
+  content: "\e7b7";
+}
+.icon-file-xml:before {
+  content: "\e7b8";
+}
+.icon-file-css:before {
+  content: "\e7b9";
+}
+.icon-html5:before {
+  content: "\e7ba";
+}
+.icon-html52:before {
+  content: "\e7bb";
+}
+.icon-css3:before {
+  content: "\e7bc";
+}
+.icon-chrome:before {
+  content: "\e7bd";
+}
+.icon-firefox:before {
+  content: "\e7be";
+}
+.icon-IE:before {
+  content: "\e7bf";
+}
+.icon-opera:before {
+  content: "\e7c0";
+}
+.icon-safari:before {
+  content: "\e7c1";
+}
+.icon-IcoMoon:before {
+  content: "\e7c2";
+}
+/*
+BASE (MOBILE) SIZE
+This are the mobile styles. It's what people see on their phones. If
+you set a great foundation, you won't need to add too many styles in
+the other stylesheets. Remember, keep it light: Speed is Important.
+*/
+/*********************
+GENERAL STYLES
+*********************/
+html,
+body {
+  background-color: #f1f1f1;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  color: #333333;
+}
+/*********************
+LINK STYLES
+*********************/
+a,
+a:visited {
+  color: #45cbba;
+  text-decoration: none;
+  /* on hover */
+  /* on click */
+  /* mobile tap color */
+}
+a:hover,
+a:visited:hover,
+a:focus,
+a:visited:focus {
+  color: #31b1a1;
+}
+a:link,
+a:visited:link {
+  /*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+}
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizelegibility;
+  font-weight: 400;
+  margin: 0;
+  /*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+  /* removing text decoration from all headline links */
+}
+h1 a,
+.h1 a,
+h2 a,
+.h2 a,
+h3 a,
+.h3 a,
+h4 a,
+.h4 a,
+h5 a,
+.h5 a {
+  text-decoration: none;
+}
+h1,
+.h1 {
+  font-size: 2.5em;
+  line-height: 1.333em;
+}
+h2,
+.h2 {
+  font-size: 1.75em;
+  line-height: 1.4em;
+  margin-bottom: 0.375em;
+}
+h3,
+.h3 {
+  font-size: 1.125em;
+}
+h4,
+.h4 {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+h5,
+.h5 {
+  font-size: 0.846em;
+  line-height: 2.09em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+/******************************************************************
+Body
+******************************************************************/
+.map-container,
+.header,
+.footer {
+  text-align: center;
+}
+.header {
+  padding-top: 3em;
+}
+.description {
+  padding: 3em;
+}
+.description p {
+  font-size: 120%;
+}
+.map-container {
+  padding-top: 3em;
+}
+.map-iframe {
+  width: 80%;
+  height: 25em;
+  border: 0;
+  margin: 0;
+}
+.coffee-shops {
+  width: 100%;
+  background: #674941;
+}
+.coffee-shops .shop {
+  padding: 3em;
+}
+.coffee-shops .shop:nth-child(even) {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.coffee-shops h1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizelegibility;
+  font-weight: 400;
+  /*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+  /* removing text decoration from all headline links */
+  font-size: 1.75em;
+  line-height: 1.4em;
+  margin-bottom: 0.375em;
+  color: #f1f1f1;
+  text-align: center;
+  margin: 0;
+}
+.coffee-shops h1 a {
+  text-decoration: none;
+}
+.coffee-shops .h3 {
+  color: #f1f1f1;
+  text-align: center;
+}
+.strapless-radio input[type=radio] {
+  position: absolute;
+  opacity: 0;
+}
+.strapless-radio input[type=radio]:checked + label:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e73b";
+}
+.strapless-radio label:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e73c";
+  padding-right: 0.5em;
+  vertical-align: bottom;
+}
+.strapless-checkbox input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+}
+.strapless-checkbox input[type=checkbox]:checked + label:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e738";
+}
+.strapless-checkbox label:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e739";
+  padding-right: 0.5em;
+  vertical-align: bottom;
+}
+table.strapless-table {
+  border: 1px solid #cbcbcb;
+  background: #f1f1f1;
+}
+table.strapless-table caption {
+  font-size: 1.5em;
+  font-style: italic;
+}
+table.strapless-table th,
+table.strapless-table td {
+  padding: 0.25em;
+}
+table.strapless-table thead {
+  text-align: left;
+  border-bottom: 1px solid #cbcbcb;
+}
+table.strapless-table tfoot {
+  text-align: left;
+  border-top: 1px solid #cbcbcb;
+}
+table.strapless-table tbody tr {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+table.strapless-table tbody tr:nth-child(even) {
+  background: #fff;
+}
+table.strapless-table tbody tr:hover {
+  background: #95e1d8;
+}
+.btn {
+  padding: .75em 1.25em;
+  margin: 0;
+  border: none;
+  color: #f1f1f1;
+  text-decoration: none;
+  text-shadow: none;
+  background: #777777;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-transition: background .3s;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  vertical-align: middle;
+}
+.btn:hover {
+  background: #5e5e5e;
+}
+.btn:active {
+  background: #777777;
+}
+.btn:disabled {
+  background: #777777;
+  opacity: 0.7;
+}
+.btn.btn-success {
+  border: none;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: none;
+  background: #30b052;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-transition: background .3s;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  vertical-align: middle;
+}
+.btn.btn-success:hover {
+  background: #25883f;
+}
+.btn.btn-success:active {
+  background: #30b052;
+}
+.btn.btn-success:disabled {
+  background: #30b052;
+  opacity: 0.7;
+}
+.btn.btn-inverse {
+  border: none;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: none;
+  background: #333333;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-transition: background .3s;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  vertical-align: middle;
+}
+.btn.btn-inverse:hover {
+  background: #1a1a1a;
+}
+.btn.btn-inverse:active {
+  background: #333333;
+}
+.btn.btn-inverse:disabled {
+  background: #333333;
+  opacity: 0.7;
+}
+.btn.btn-primary {
+  border: none;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: none;
+  background: #45cbba;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-transition: background .3s;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  vertical-align: middle;
+}
+.btn.btn-primary:hover {
+  background: #30ad9d;
+}
+.btn.btn-primary:active {
+  background: #45cbba;
+}
+.btn.btn-primary:disabled {
+  background: #45cbba;
+  opacity: 0.7;
+}
+.btn.btn-blue {
+  border: none;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: none;
+  background: #3f99d8;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-transition: background .3s;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  vertical-align: middle;
+}
+.btn.btn-blue:hover {
+  background: #267fbe;
+}
+.btn.btn-blue:active {
+  background: #3f99d8;
+}
+.btn.btn-blue:disabled {
+  background: #3f99d8;
+  opacity: 0.7;
+}
+.btn.btn-warning {
+  border: none;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: none;
+  background: #c4af28;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-transition: background .3s;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  vertical-align: middle;
+}
+.btn.btn-warning:hover {
+  background: #9a891f;
+}
+.btn.btn-warning:active {
+  background: #c4af28;
+}
+.btn.btn-warning:disabled {
+  background: #c4af28;
+  opacity: 0.7;
+}
+.btn.btn-danger {
+  border: none;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: none;
+  background: #c74b30;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-transition: background .3s;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  vertical-align: middle;
+}
+.btn.btn-danger:hover {
+  background: #9e3c26;
+}
+.btn.btn-danger:active {
+  background: #c74b30;
+}
+.btn.btn-danger:disabled {
+  background: #c74b30;
+  opacity: 0.7;
+}
+.btn.btn-large {
+  font-size: 1.3em;
+}
+.btn.btn-small {
+  font-size: .9em;
+}
+/*
+LARGER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+~481px+
+*/
+@media only screen and (min-width: 28.75em) {
+  /******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to 
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection. 
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.less styles.
+
+******************************************************************/
+  /*********************
+07. FORM STYLES
+*********************/
+  fieldset {
+    margin: 1.5em;
+  }
+  /*********************
+FOOTER STYLES
+*********************/
+  /*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+  /* end .footer-links */
+  input,
+  button,
+  textarea,
+  label,
+  select {
+    display: block;
+    width: auto;
+  }
+}
+/*
+TABLET & SMALLER LAPTOPS
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+~768px+
+*/
+@media only screen and (min-width: 40.5em) {
+  .fourcol {
+    width: 33.33%;
+    float: left;
+    padding: 3em !important;
+  }
+  .map-iframe {
+    width: 100%;
+  }
+}
+/*
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+~1030px+
+*/
+@media only screen and (min-width: 64.375em) {
+  /******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop. 
+
+******************************************************************/
+}
+/*
+LARGE VIEWING SIZE
+This is for the larger monitors and possibly full screen viewers.
+~1240px+
+*/
+@media only screen and (min-width: 77.5em) {
+  /******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Super Large Monitor Stylesheet
+
+You can add some advanced styles here if you like. This kicks in
+on larger screens.
+
+******************************************************************/
+}
+/*
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with
+other displays with a 2x resolution. You can also create a media
+query for retina AND a certain size if you want. Go Nuts.
+*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Retina Screens & Devices Stylesheet
+
+When handling retina screens you need to make adjustments, especially
+if you're not using font icons. Here you can add them in one neat
+place.
+
+******************************************************************/
+  /* 
+
+EXAMPLE 
+Let's say you have an image and you need to make sure it looks ok
+on retina screens. Let's say we have an icon which dimension are
+24px x 24px. In your regular stylesheets, it would look something
+like this:
+
+.icon {
+	width: 24px;
+	height: 24px;
+	background: url(img/test.png) no-repeat;
+}
+
+For retina screens, we have to make some adjustments, so that image
+doesn't look blurry. So, taking into account the image above and the
+dimensions, this is what we would put in our retina stylesheet:
+
+.icon {
+	background: url(img/test@2x.png) no-repeat;
+	background-size: 24px 24px;
+}
+
+So, you would create the same icon, but at double the resolution, meaning 
+it would be 48px x 48px. You'd name it the same, but with a @2x at the end
+(this is pretty standard practice). Set the background image so it matches
+the original dimensions and you are good to go. 
+
+*/
+}
+/*
+PRINT STYLESHEET
+Feel free to customize this. Remember to add things that won't make
+sense to print at the bottom. Things like nav, ads, and forms should
+be set to display none.
+*/
+@media print {
+  /******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Print Stylesheet
+
+This is the print stylesheet. There's probably not a lot
+of reasons to edit this stylesheet. If you want to
+though, go for it.
+
+******************************************************************/
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+  a,
+  a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+  a:after,
+  a:visited:after {
+    content: " (" attr(href) ")";
+  }
+  a abbr[title]:after,
+  a:visited abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+  .sidebar,
+  .page-navigation,
+  .wp-prev-next,
+  .respond-form,
+  nav {
+    display: none;
+  }
+}
